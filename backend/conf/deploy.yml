@@ -1,0 +1,13 @@
+elasticsearch:
+  address: "http://34.162.180.169:9200"
+  username: "wghong"
+  password: "341015"
+
+gcs:
+  bucket: "appstore_go_bucket"
+
+token:
+  secret: "secret"
+
+stripe:
+  key: "sk_test_51PAF5YRxWmJcAHJ1005ceAF5HPEAJeHkP7NCePrr4j0P2YUnCYAQrnekEEUO7MOL9AX56PrNLDD9hr3prfMXPfeN00060jyB8U"
