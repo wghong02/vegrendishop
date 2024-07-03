@@ -2,7 +2,7 @@
 
 This project is a online retail shop that allows small businesses to create and sell their styled apps.
 
-The client adopted React and Ant Design for an engaging and intuitive user experience. The HTTP requests and responses are handled by Java SpringBoot. Data is stored in a go ElasticSearch noSQL database and integrated with GCP bucket for image storage.
+The client adopted React and Ant Design for an engaging and intuitive user experience. The HTTP requests and responses are handled by gorilla handlers, and secured by jwt middleware. Data is stored in a go ElasticSearch noSQL database and integrated with GCP bucket for image storage.
 
 ## Demonstration
 
