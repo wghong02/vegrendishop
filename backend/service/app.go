@@ -16,12 +16,12 @@ import (
 )
 
 
-func SearchApps(title string, description string) ([]model.App, error) {
+func SearchCrafts(title string, description string) ([]model.App, error) {
    if title == "" {
-       return SearchAppsByDescription(description)
+       return SearchCraftsByDescription(description)
    }
    if description == "" {
-       return SearchAppsByTitle(title)
+       return SearchCraftsByTitle(title)
    }
 
 
@@ -40,7 +40,7 @@ func SearchApps(title string, description string) ([]model.App, error) {
 }
 
 
-func SearchAppsByTitle(title string) ([]model.App, error) {
+func SearchCraftsByTitle(title string) ([]model.App, error) {
    query := elastic.NewMatchQuery("title", title)
    query.Operator("OR")
    if title == "" {
@@ -55,7 +55,7 @@ func SearchAppsByTitle(title string) ([]model.App, error) {
 }
 
 
-func SearchAppsByDescription(description string) ([]model.App, error) {
+func SearchCraftsByDescription(description string) ([]model.App, error) {
    query := elastic.NewMatchQuery("description", description)
    query.Operator("AND")
    if description == "" {

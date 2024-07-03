@@ -84,7 +84,7 @@ export const deleteApp = (appId) => {
 	});
 };
 
-export const searchApps = (query) => {
+export const searchCrafts = (query) => {
 	const title = query?.title ?? "";
 	const description = query?.description ?? "";
 

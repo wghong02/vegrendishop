@@ -69,16 +69,16 @@ func searchHandler(w http.ResponseWriter, r *http.Request) {
     // 2. call service level to handle logic
     var apps []model.App
     var err error
-    apps, err = service.SearchApps(title, description)
+    apps, err = service.SearchCrafts(title, description)
     if err != nil {
-        http.Error(w, "Failed to read Apps from backend", http.StatusInternalServerError)
+        http.Error(w, "Failed to read Crafts from backend", http.StatusInternalServerError)
         return
     }
  
     // 3. construct response
     js, err := json.Marshal(apps)
     if err != nil {
-        http.Error(w, "Failed to parse Apps into JSON format", http.StatusInternalServerError)
+        http.Error(w, "Failed to parse Crafts into JSON format", http.StatusInternalServerError)
         return
     }
     w.Write(js)
